@@ -17,8 +17,7 @@ public:
 	std::vector<double> m_middle;
 	tridiagonal_matrix(const std::vector<double> & down,
 					   const std::vector<double> & upper,
-					   const std::vector<double> & middle)
-		: m_down{ down }, m_upper{ upper }, m_middle{ middle } { };
+					   const std::vector<double> & middle) : m_down{ down }, m_upper{ upper }, m_middle{ middle } { };
 	auto clone() -> std::unique_ptr<tridiagonal_matrix>
 	{
 		return std::make_unique<tridiagonal_matrix>(this->m_down, this->m_upper, this->m_middle);
